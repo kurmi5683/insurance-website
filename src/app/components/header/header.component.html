@@ -1,0 +1,75 @@
+<div class="h-20 w-full flex justify-between items-center p-4 shadow-md">
+    <div class="font-bold text-3xl text-teal-600 ml-4">Logo</div>
+    
+    <!-- Search Bar for Larger Screens -->
+    <div class="hidden lg:block flex-1 mx-4 max-w-40">
+        <input type="input" placeholder="Search here..." class="w-full py-2 border-b-[1px] border-b-gray-400 outline-none" />
+    </div>
+
+    <!-- Navigation Links for Large Screens -->
+    <div class="hidden text-md lg:flex items-center space-x-6 font-semibold">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-teal-600">Home</a>
+            <svg class="w-4 h-4 ml-1 text-teal-600 group-hover:text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg>
+        </div>
+        <div class="flex justify-between items-center hover:text-teal-600">
+            <a href="#" class="hover:text-teal-600">Pages</a>
+            <svg class="w-4 h-4 ml-1 hover:text-teal-600 group-hover:text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg>
+        </div>
+        <div class="flex justify-between items-center hover:text-teal-600">
+            <a href="#" class="hover:text-teal-600">Insurance</a>
+            <svg class="w-4 h-4 ml-1 hover:text-teal-600 group-hover:text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg>
+        </div>
+       
+        <div class="flex justify-between items-center hover:text-teal-600">
+            <a href="#" class="hover:text-teal-600">Blog</a>
+            <svg class="w-4 h-4 ml-1 hover:text-teal-600 group-hover:text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg>
+        </div>
+       
+     
+        <a href="#" class="hover:text-teal-600">Contact Us</a>
+    </div>
+
+
+
+    <!-- Phone Number on Large Screens -->
+    <div class="flex items-center space-x-6 text-md ml-4">
+        <div class="text-teal-600 font-semibold cursor-pointer hidden lg:flex justify-between items-center">
+            <img src="../../../assets/images/phone.png" class="w-5 h-5 mr-2" />
+            <p>+(111) 65 458 856</p>
+        </div>
+
+        <div class="text-white font-semibold  cursor-pointer hover:bg-teal-500 hidden lg:flex justify-between space-x-2 items-center bg-teal-600 px-5 py-3 rounded-md ">
+            <img src="../../../assets/images/edit-text.png" class="w-5 h-5 text-white  mr-2" />
+            Get A Quote
+        </div>
+        <img src="../../../assets/images/align-text.png" class="w-7 h-7 cursor-pointer lg:hidden" (click)="toggleMobileMenu()" />
+    </div>
+
+    <!-- Sliding Menu -->
+    <div [ngClass]="{'fixed top-0 right-0 h-full w-[50%] bg-white shadow-xl transform transition-transform duration-300 ease-in-out': isMobileMenuOpen, 'hidden': !isMobileMenuOpen}" class="z-[40]">
+        <div class="flex justify-end p-4">
+            <button (click)="toggleMobileMenu()" class="text-teal-600 text-2xl">&times;</button>
+        </div>
+        <div class="flex flex-col font-semibold px-4">
+            <a href="#" class="py-4 border-b text-left text-teal-600">Home</a>
+            <a href="#" class="py-4 border-b text-left hover:text-teal-600">About Us</a>
+            <a href="#" class="py-4 border-b text-left hover:text-teal-600">Insurances</a>
+            <a href="#" class="py-4 border-b text-left hover:text-teal-600">Contact Us</a>
+            <a href="#" class="py-4 border-b text-left hover:text-teal-600">Get A Quote</a>
+            <div class="flex justify-start space-x-2 items-center py-4">
+                <img src="../../../assets/images/phone.png" class="w-4 h-4" />
+                <a href="#"> +(111) 65 458 856</a>
+            </div>
+            <a href="#" class="py-4 text-left hover:text-teal-600">Other</a>
+        </div>
+    </div>
+</div>
